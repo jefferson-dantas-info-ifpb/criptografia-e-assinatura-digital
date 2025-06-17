@@ -42,6 +42,6 @@ verifica_assinatura = verificar_assinatura(
 )
 print("\nVerificação da assinatura:")
 if verifica_assinatura:
-    print("Assinatura válida! Algoritmo: " + verifica_assinatura)
+    print("Assinatura válida!")
 else:
     print("Assinatura inválida!")
