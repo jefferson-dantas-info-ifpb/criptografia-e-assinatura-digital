@@ -99,13 +99,14 @@ def descriptografar():
 
     nossa_chave_privada = ler_arquivo(NOSSA_CHAVE_PRIVADA_ERIK_LUCAS)
     mensagem_criptografada = ler_arquivo(MENSAGEM_RECEBIDA_CRIPTOGRAFADA)
+
+    print("Descriptografando mensagem...")
     mensagem_descriptografada = descriptografar_mensagem(mensagem_criptografada, nossa_chave_privada)
 
     if mensagem_descriptografada is None:
         print_erro("Erro ao descriptografar a mensagem. Verifique se a chave privada está correta.")
         return
 
-    print("Descriptografando mensagem...")
     print_sucesso("Mensagem descriptografada com sucesso")
     print_sucesso(f"Ela ficará armazenada no arquivo '{MENSAGEM_RECEBIDA_DESCRIPTOGRAFADA}'")
     print_sucesso(f"Mensagem descriptografada: {F.YELLOW}{mensagem_descriptografada}")
